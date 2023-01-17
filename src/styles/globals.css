@@ -1,107 +1,222 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --primaryColor: #C72617;
+  --secondryColor: #D1660C;
+  --headingPurpel: #6824cf;
+  --headingBlue: #10417f;
+  --greyColor: #313131;
+  --xs-font: .75rem !important;
+  --small-font: .825rem !important;
+  --regular-font: .875rem !important;
+  --medium-font: 1rem !important;
+  --large-font: 1.125rem !important
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+body{
   margin: 0;
+  padding: 0;
+  font-family: 'Raleway';
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+footer {
+  background-color: #FFFFFF;
+  min-height: auto
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+footer img.footerlogo {
+  width: 173px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 10px
 }
 
-a {
-  color: inherit;
+.fot-top-bar {
+  border-bottom: 1px solid #FFFFFF;
+  height: 56px
+}
+
+.fot-top-bar .innerBar {
+  display: flex;
+  justify-content: space-between
+}
+
+.fot-top-bar .socialArea .emailBox {
+  min-height: 55px;
+  display: flex;
+  background-color: #FFFFFF;
+  font-size: var(--regular-font);
+  border: 1px solid #2b3955;
+  border-width: 0 1px 0 1px;
+  width: fit-content;
+  padding: 0 25px;
+  align-items: center;
+  font-size: var(--regular-font)
+}
+
+.fot-top-bar .socialArea .emailBox a {
+  color: #FFFFFF
+}
+
+.fot-top-bar .socialArea .emailBox i {
+  margin-left: 5px
+}
+
+.footerMenu-Btn {
+  background-color: #FFFFFF;
+  font-size: var(--regular-font);
+  border: 1px solid #FFFFFF;
+  border-width: 0 1px 0 1px;
+  width: fit-content;
+  padding: 0 25px;
+  align-items: center;
+  font-size: var(--regular-font);
+  color: #FFFFFF
+}
+
+.footerMenu-Btn.tooglrIcon i {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg)
+}
+
+.footerMenu-Btn i {
+  margin-left: 10px
+}
+
+.fot-top-bar .socialArea {
+  margin-left: 5px;
+  display: flex;
+  column-gap: 20px
+}
+
+.fot-top-bar .socialArea .emailBox i {
+  font-size: var(--large-font);
+  margin-right: 10px
+}
+
+.fot-top-bar .socialArea .emailBox:hover i {
+  color: #13b9c4
+}
+
+.fot-top-bar .socialArea ul.socialIcon {
+  display: flex
+}
+
+.fot-top-bar .socialArea ul.socialIcon li a {
+  padding: 0 20px;
+  color: #FFFFFF;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  font-size: var(--large-font)
+}
+
+.fot-top-bar .socialArea ul.socialIcon li a:hover {
+  color: var(--primaryColor)
+}
+
+.footerNav {
+  display: flex;
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 15px
+}
+
+#footerNav {
+  display: none
+}
+
+.footerNav ul {
+  flex: 1;
+  padding: 13px 10px 0
+}
+
+.footerNav ul li {
+  list-style: none
+}
+
+.footerNav ul li a {
+  color: #FFFFFF;
+  align-items: center;
+  display: inline-flex;
+  padding: 2px 0;
+  font-weight: 400;
+  font-size: var(--small-font)
+}
+
+.footerNav ul li a:hover {
+  color: var(--primaryColor)
+}
+
+.footerNav ul li a span,
+.footerNav ul li a i {
+  color: #FFFFFF;
+  font-size: var(--regular-font);
+  margin-right: 10px
+}
+
+.fot-bot-bar {
+  border-top: 1px solid #FFFFFF
+}
+
+.footerContentArea {
+  display: flex;
+  color: #FFFFFF;
+  padding: 25px 0;
+  justify-content: space-between;
+  column-gap: 60px
+}
+
+.footerContentArea .growArea {
+  max-width: 430px;
+  column-gap: 50px
+}
+
+.footerContentArea .growArea h2 {
+  color: var(--primaryColor);
+  font-size: var(--large-font);
+  font-weight: 500;
+  padding-bottom: 10px
+}
+
+.footerContentArea .growArea p {
+  font-size: var(--regular-font);
+  font-weight: 300;
+  color: #FFFFFF
+}
+
+.footerLinks {
+  max-width: 230px;
+  width: 100%
+}
+
+.footerLinks h2 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--greyColor)
+}
+
+.footerLinks ul {
+  margin-top: 5px;
+  padding-left: 0
+}
+
+.footerLinks li {
+  padding-top: 2px;
+  margin: 0;
+  padding-bottom: 2px !important;
+  list-style: none
+}
+
+.footerLinks li a {
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--greyColor);
 }
