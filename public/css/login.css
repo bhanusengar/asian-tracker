@@ -32,17 +32,17 @@
   background-color: var(--secondryColor);
 }
 
-.registerWrapper {
+.registerWrapper  {
 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  /* height: 70vh; */
   background: #FFFFFF;
-  width: 500px;  
+  max-width: 520px;  
   margin: auto; 
-  margin-top: 20px;
-  padding: 15px;
+  margin-top: 10px 20px;
+  padding: 20px;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
 }
 .signupBtn{
@@ -53,7 +53,7 @@
   padding: 10px;
   gap: 10px;
   
-  width: 613px;
+  width: 490px;
   height: 48px;
   border: none;
   background: #395180;

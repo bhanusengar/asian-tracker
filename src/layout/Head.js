@@ -20,7 +20,7 @@ export default function Header(children) {
         <title>Asian Tracker</title>
      
         {/* Favicon */}
-        <link href={'/favicon.ico'} rel={'icon'} type={'image/x-icon'} />
+        {/* <link href={'/favicon.ico'} rel={'icon'} type={'image/x-icon'} /> */}
         {/* core Custom css */}
 
         

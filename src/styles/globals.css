@@ -11,115 +11,28 @@
   --large-font: 1.125rem !important
 }
 
-body{
+
+*, body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.form-error{
+  color: red;
+  margin-bottom: 0px !important;
+  font-size: 12px;
 }
 
 footer {
   background-color: #FFFFFF;
-  min-height: auto
-}
-
-footer img.footerlogo {
-  width: 173px;
-  height: auto;
-  object-fit: contain;
-  margin-top: 10px
-}
-
-.fot-top-bar {
-  border-bottom: 1px solid #FFFFFF;
-  height: 56px
-}
-
-.fot-top-bar .innerBar {
-  display: flex;
-  justify-content: space-between
-}
-
-.fot-top-bar .socialArea .emailBox {
-  min-height: 55px;
-  display: flex;
-  background-color: #FFFFFF;
-  font-size: var(--regular-font);
-  border: 1px solid #2b3955;
-  border-width: 0 1px 0 1px;
-  width: fit-content;
-  padding: 0 25px;
-  align-items: center;
-  font-size: var(--regular-font)
-}
-
-.fot-top-bar .socialArea .emailBox a {
-  color: #FFFFFF
-}
-
-.fot-top-bar .socialArea .emailBox i {
-  margin-left: 5px
-}
-
-.footerMenu-Btn {
-  background-color: #FFFFFF;
-  font-size: var(--regular-font);
-  border: 1px solid #FFFFFF;
-  border-width: 0 1px 0 1px;
-  width: fit-content;
-  padding: 0 25px;
-  align-items: center;
-  font-size: var(--regular-font);
-  color: #FFFFFF
-}
-
-.footerMenu-Btn.tooglrIcon i {
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg)
-}
-
-.footerMenu-Btn i {
-  margin-left: 10px
-}
-
-.fot-top-bar .socialArea {
-  margin-left: 5px;
-  display: flex;
-  column-gap: 20px
-}
-
-.fot-top-bar .socialArea .emailBox i {
-  font-size: var(--large-font);
-  margin-right: 10px
-}
-
-.fot-top-bar .socialArea .emailBox:hover i {
-  color: #13b9c4
-}
-
-.fot-top-bar .socialArea ul.socialIcon {
-  display: flex
-}
-
-.fot-top-bar .socialArea ul.socialIcon li a {
-  padding: 0 20px;
-  color: #FFFFFF;
-  align-items: center;
-  height: 100%;
-  display: flex;
-  font-size: var(--large-font)
-}
-
-.fot-top-bar .socialArea ul.socialIcon li a:hover {
-  color: var(--primaryColor)
-}
-
-.footerNav {
-  display: flex;
-  border-bottom: 1px solid #FFFFFF;
-  padding-bottom: 15px
+  min-height: auto;
+  box-shadow: #afa9a9 2px 2px 5px;
 }
 
 #footerNav {

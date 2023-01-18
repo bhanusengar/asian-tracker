@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-
+import { menuCountry } from '@/http';
 const NavbarSecond = () => {
+    const [menu, setMenu] = useState([]);
+    const getMenu = async ()=>{
+        try{
+            const {data} = await menuCountry();
+            setMenu(data.data);
+        }catch(err){
+            console.log("message:", err.message);
+        }
+    }
+   
+    // console.log(menu);
 
+     useEffect(()=> {
+        
+        getMenu();
+
+    },[])
     return (
 
         <>
@@ -12,6 +28,12 @@ const NavbarSecond = () => {
             </Head>
             <nav className="navbar navbar-expand-lg " id='secondNavbar'>
                 <ul>
+
+                {
+                    menu.length !=0 && menu.map((item)=>(
+                        <li><Link className='text-capitalize' href="#">{item.title}</Link></li>
+                    ))
+                }
                     <li><Link href={'#'}>War in Ukraine</Link></li>
                     <li><Link href={'#'}>COVID-19</Link></li>
                     <li><Link href={'#'}>World</Link></li>

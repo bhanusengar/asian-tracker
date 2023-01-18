@@ -1,24 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import $ from 'jquery'
-const FirstNavbar = () => {
-   
-    if (typeof window !== 'undefined') {
-
-       
-            $(".nav_ico").click(function(){
-                $(".main_nav").toggleClass("active");
-            });
-            $(".main_nav").click(function(){
-                $(this).removeClass("active");
-            });
-            $( ".main_nav ul" ).click(function( event ) {
-                event.stopImmediatePropagation();
-            });	
-    
+import { menuCategory } from './../http';
+const FirstNavbar =  () => {
+   const [menu, setMenu] = useState([]);
+    const getMenu = async ()=>{
+        try{
+            const {data} = await menuCategory();
+            setMenu(data.data);
+        }catch(err){
+            console.log("message:", err.message);
+        }
     }
+   
+    // console.log(menu);
+
+     useEffect(()=> {
+        
+        getMenu();
+
+    },[])
 
     return (
         <>
@@ -36,8 +39,12 @@ const FirstNavbar = () => {
                         <input id="menuTrigger" type="checkbox" name="" />
                         <nav className="main_nav">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">News</a></li>
+
+                                {menu.length !=0 && menu.map((item)=>(
+                                    <li><Link className='text-capitalize' href="#">{item.title}</Link></li>
+                                ))}
+                                
+                                {/* <li><a href="#">News</a></li>
                                 <li><a href="#">Defense</a></li>
                                 <li><a href="#">Economy</a></li>
                                 <li><a href="#">Sci-tech</a></li>
@@ -49,7 +56,7 @@ const FirstNavbar = () => {
                                         <li><a href="#">Web Development</a></li>
                                        
                                     </ul>
-                                </li>
+                                </li> */}
                                 
                             </ul>
                         </nav>
