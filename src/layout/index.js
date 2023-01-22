@@ -9,9 +9,11 @@ import FirstNavbar from "./FirstNavbar"
 export default function Layout(props) {
 
   return (<>
-    <Head { ...props } ></Head>
+    <Head { ...props } >
+    
+    </Head>
     <FirstNavbar />
-    <NavbarSecond />
+    {/* <NavbarSecond /> */}
     { props.children }
      <Footer /> 
   </>

@@ -21,7 +21,7 @@ const Register = () => {
   ];
   const [inputValue, setInputValue] = useState(
     {
-      username: "", email: "", fname: "", lname: "", password: "", confirm_password: "", role: "", mobile: ""
+      username: "", email: "", name: "", password: "", confirm_password: "", role: "Author", mobile: ""
     }
   );
 
@@ -65,19 +65,19 @@ const Register = () => {
           ) : null}
             </div>
             <div className='col-md-6 mt-3'>
-              <InputField type={'text'} name={'fname'} value={values.fname} label={'First Name'} onChange={handleChange} />
-              {errors.fname && touched.fname ? (
-            <p className="form-error">{errors.fname}</p>
+              <InputField type={'text'} name={'name'} value={values.fname} label={'Name'} onChange={handleChange} />
+              {errors.name && touched.name ? (
+            <p className="form-error">{errors.name}</p>
           ) : null}
             </div>
-            <div className='col-md-6 mt-3'>
+            {/* <div className='col-md-6 mt-3'>
               <InputField type={'text'} name={'lname'} value={values.lname} label={'Last Name'} onChange={handleChange} />
               {errors.lname && touched.lname ? (
             <p className="form-error">{errors.lname}</p>
           ) : null}
-            </div>
+            </div> */}
             <div className='col-md-12 mt-3'>
-<SelectBox name={'role'} options={roleOption} label={'Sign Up as'} />
+<SelectBox name={'role'} options={roleOption} label={'Sign Up as'} onChange={handleChange} />
 {errors.role && touched.role ? (
             <p className="form-error">{errors.role}</p>
           ) : null}

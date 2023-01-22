@@ -1,0 +1,1 @@
+{"c":["pages/index","webpack"],"r":["pages/article/[article]"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=D%3A%5Csanojproject%5Casian-tracker%5Csrc%5Cpages%5Carticle%5C%5Barticle%5D.js&page=%2Farticle%2F%5Barticle%5D!","./src/pages/article/[article].js"]}

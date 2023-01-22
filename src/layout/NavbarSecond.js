@@ -13,12 +13,10 @@ const NavbarSecond = () => {
         }
     }
    
-    // console.log(menu);
+    console.log(menu);
 
      useEffect(()=> {
-        
         getMenu();
-
     },[])
     return (
 
@@ -26,15 +24,20 @@ const NavbarSecond = () => {
             <Head>
                 <link href={'/css/navbar1.css'} rel={'stylesheet'} />
             </Head>
-            <nav className="navbar navbar-expand-lg " id='secondNavbar'>
+            <nav className="navbar navbar-expand-lg py-0 " id='secondNavbar'>
                 <ul>
 
                 {
                     menu.length !=0 && menu.map((item)=>(
-                        <li><Link className='text-capitalize' href="#">{item.title}</Link></li>
+                    <li key={item.id}>
+                        <Link className='text-capitalize'  href={item.slug} >{item.title}
+                        </Link>
+                    </li>
                     ))
                 }
-                    <li><Link href={'#'}>War in Ukraine</Link></li>
+
+
+                    <li><Link href={'/test'}>War in Ukraine</Link></li>
                     <li><Link href={'#'}>COVID-19</Link></li>
                     <li><Link href={'#'}>World</Link></li>
                     <li><Link href={'#'}>Middle East</Link></li>

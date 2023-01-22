@@ -6,12 +6,13 @@ import Head from 'next/head'
 import { loginSchema } from 'utils/ValidationSchema'
 import { useFormik } from 'formik'
 import { useState } from 'react'
+import { login } from './../http'
 const Login = () => {
 
 
   const [inputValue, setInputValue] = useState(
     {
-      email: "", password: ""
+      username: "", password: ""
     }
   );
 
@@ -21,7 +22,7 @@ const Login = () => {
     validationSchema: loginSchema,
     onSubmit: async (values,action) => {
       try {
-        const res = await userLogin(values);
+        const res = await login(values);
       } catch (error) {
         console.log("message", error.message);
       }
@@ -41,9 +42,9 @@ const Login = () => {
               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
               <div className="form-outline mb-4">
                
-                <InputField type={'email'} name={'email'} value={values.email} label={'Email'} onChange={handleChange} />
-              {errors.email && touched.email ? (
-            <p className="form-error">{errors.email}</p>
+                <InputField type={'username'} name={'username'} value={values.username} label={'Username'} onChange={handleChange} />
+              {errors.username && touched.username ? (
+            <p className="form-error">{errors.username}</p>
           ) : null}
               </div>
             

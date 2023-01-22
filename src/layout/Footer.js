@@ -2,114 +2,73 @@ import React from 'react'
 import Link from 'next/link'
 const Footer = () => {
     return (
-        <footer >
-            <div className='footerWrapper'>
-                <div className="fot-bot-bar">
-                    <div className="container">
-                        <div id="footerNav">
-                            <div className="footerNav">
-                                <ul>
-
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-
-                                </ul>
-
-                                <ul>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                </ul>
-
-                                <ul>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                    <li><Link href={'/'} >Lorem</Link></li>
-                                </ul>
-
-                            </div>
-                        </div>
-
-                        {/* <!-- footer Address area --> */}
-
-                        <div className="footerContentArea">
-                            {/* <!-- link Area --> */}
-                            <div className="footerLinks">
-                                <h2> About </h2>
-                                <ul>
-                                    <li><Link href={'/'} >About us</Link></li>
-                                    <li><Link href={'/'} >Code of ethics</Link></li>
-                                    <li><Link href={'/'} >Vision & Mission</Link></li>
-                                    <li><Link href={'/'} >Terms of use</Link></li>
-                                    <li><Link href={'/'} >Site Map</Link></li>
-                                    <li><Link href={'/'} >Privacy Policy</Link></li>
-                                    <li><Link href={'/'} >Cookie Policy</Link></li>
-                                    <li><Link href={'/'} >Community guidelines</Link></li>
-                                </ul>
-                            </div>
-                            <div className="footerLinks">
-                                <h2> Contact Us </h2>
-                                <ul>
-                                    <li><Link href={'/'} >Connect with us</Link></li>
-                                    <li><Link href={'/'} >Advertise with us</Link></li>
-                                    <li><Link href={'/'} >Our Apps</Link></li>
-                                    <li><Link href={'/'} >Podcast</Link></li>
-                                    <li><Link href={'/'} >Submit a Review</Link></li>
-
-                                </ul>
-                            </div>
-                            <div className="footerLinks">
-                                <h2> Our Network </h2>
-                                <ul>
-                                    <li><Link href={'/'} >Asian Tracker Forum</Link></li>
-                                    <li><Link href={'/'} >Indian Institute of Peace
-                                        keeping studies</Link></li>
-                                    <li><Link href={'/'} >Institute of Human Rights
-                                        & Public Liberties</Link></li>
-
-                                </ul>
-                            </div>
-                            <div className="footerLinks">
-                                <h2> Career </h2>
-                                <ul>
-                                    <li><Link href={'/'} >Work for us</Link></li>
-                                    <li><Link href={'/'} >Qualitative HR</Link></li>
-
-                                </ul>
-                            </div>
-
-                            <div className="footerLinks">
-                                <h2>Our network</h2>
-                                <ul>
-                                    <li><Link href={'/'} >About us</Link></li>
-                                    <li><Link href={'/'} >Code of ethics</Link></li>
-                                    <li><Link href={'/'} >Terms and conditions</Link></li>
-                                    <li><Link href={'/'} >Privacy Policy</Link></li>
-                                    <li><Link href={'/'} >Cookie Policy</Link></li>
-                                    <li><Link href={'/'} >Site policy</Link></li>
-                                    <li><Link href={'/'} >Community guidelines</Link></li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-                        {/* <!-- footer Card option --> */}
-
+        <footer class="footer-control">
+        <div class="scrn-container">
+            <div class="row footer-menu">
+                <div class="col-xl-2 col-md-4 col-sm-6 col-12">
+                    <div class="navbar-toggler-in">
+                        <h1>About</h1>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Code of ethics</a></li>
+                            <li><a href="#">Vision & Mission</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                    <div class="navbar-toggler-in">
+                        <h1>Contact Us</h1>
+                        <ul>
+                            <li><a href="#">Connect with us</a></li>
+                            <li><a href="#">Advertise with us</a></li>
+                            <li><a href="#">Our Apps</a></li>
+                            <li><a href="#">Podcast</a></li>
+                            <li><a href="#">Submit a Review</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6 col-12">
+                    <div class="navbar-toggler-in">
 
+                        <h1>Our Network</h1>
+                        <ul>
+                            <li><a href="#">Asian Tracker Forum</a></li>
+                            <li><a href="#">Indian Institute of peace keeping studies</a></li>
+                            <li><a href="#">Institute of Human Rights & Public Liberties</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6 col-12">
+                    <div class="navbar-toggler-in">
+                        <h1>Career</h1>
+                        <ul>
+                            <li><a href="#">Work for us</a></li>
+                            <li><a href="#">Qualitative HR</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                    <div class="navbar-toggler-in">
+                        <h1>Our Network</h1>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Code of ethics</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Site Policy</a></li>
+                            <li><a href="#">Communtiy guidelines</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     )
 }
 
